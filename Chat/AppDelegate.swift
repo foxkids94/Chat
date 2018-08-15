@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 DispatchQueue.main.async {
                     DataSourse.shared.DownloadRoom()
                 }
-            
         }
         
         return true

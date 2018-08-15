@@ -8,15 +8,19 @@
 
 import Firebase
 
+
 final class DataSourse {
     
     static let shared = DataSourse()
     private let ref = Database.database().reference()
     private init() {}
-    let myID = "sdff"
-    //let myID = Auth.auth().currentUser?.uid - получать id пользака с Firebase, если будет время сделаю регистрацию/авторизацию по E-Mail.
-    let MyName = "Марина"
+    let myID = Auth.auth().currentUser?.uid
+    let MyName = Auth.auth().currentUser?.displayName!
     
+    //Выход
+    final func LogOut(){
+        try! Auth.auth().signOut()
+    }
     
     //Загрузка чатов
     final func DownloadRoom(){

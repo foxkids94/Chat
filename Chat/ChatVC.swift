@@ -29,7 +29,7 @@ class ChatVC: MessagesViewController, MessagesDataSource, MessagesLayoutDelegate
     }
     
     func currentSender() -> Sender {
-        return Sender(id: DataSourse.shared.myID, displayName: DataSourse.shared.MyName)
+        return Sender(id: DataSourse.shared.myID!, displayName: DataSourse.shared.MyName!)
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
